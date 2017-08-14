@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Eventetia Registration Portal</title>
+
+<style>
+/*------------------------------------css UL ------------------------------------*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: 808C89;
+}
+
+li {
+    border-right: 1px solid #bbb;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #CEF6E3;
+    padding: 50px;
+	width: 50%;
+	position: absolute;
+	left: 300px;
+	top: 120px;
+}
+input[type=text], [type=password], [type=textarea], [type=email] , [type=number],select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit], [type=reset] {
+    width: 30%;
+    background-color: #21610B;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #08088A;
+}
+
+input[type=reset]:hover {
+    background-color: #08088A;
+}
+</style>
+</head>
+<body>
+	<ul>
+		<li><a href="">Login</a></li>
+		<li><a href="">Contact</a></li>
+		<li><a href="">About</a></li>
+		<li><a href="">Home</a></li>
+</ul><br>
+<div>
+
+<p align= center><b><font size=6 face="Times New Roman">Registration Form</font> </b></p><br>
+	<form action="regsiter.php" method=post>
+	<b><font size=4>	Name &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type=text size=20 name=p1><br><br>
+		Address &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type=textarea size=20 name=p2><br><br>
+		Mobile No &nbsp &nbsp &nbsp &nbsp <input type=number size=20 name=p3><br><br>
+		Email &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type=email size=20 name=p4><br><br>
+		Password &nbsp &nbsp &nbsp &nbsp &nbsp <input type=password size=20 name=p5 id=pass required><br><br>
+		 <input type=submit> &nbsp &nbsp &nbsp &nbsp
+		  <input type=reset> </b></font>
+	</form>
+	</div>
+</body>
+</html>

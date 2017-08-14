@@ -1,0 +1,107 @@
+<?php
+session_start();
+?>
+
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: 808C89;
+}
+
+li {
+    border-right: 1px solid #bbb;
+}
+
+div {
+    border-radius: 7px;
+    background-color:white;
+    padding: 50px;
+	width: 50%;
+	position: absolute;
+	left: 300px;
+	top: 100px;
+	
+	}
+input[type=text], [type=password], [type=number], [type=date], select {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit], [type=reset] {
+    width: 30%;
+    background-color: #21610B;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #688A08;
+}
+
+input[type=reset]:hover {
+    background-color: #688A08;
+}
+</style>
+</head>
+<body bgcolor="#CEF6F5">
+
+<ul>
+
+		<li><a href="">Contact</a></li>
+		<li><a href="">About</a></li>
+		
+		<li><a href="index.html">Home</a></li>
+</ul><br>
+
+<div>
+<form action="final.php" method=post>
+<h1><center><font color=#8A2908>Payment Gateway</font><center></h1>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type=text placeholder="Your name" size=50 name=o1 required=true><br><br>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type=number placeholder="MM" size=5 name=o2 required=true>	<br><br>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type=number placeholder="YY" size=5 name=o3 required=true> <br><br>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type=number placeholder="5111 1111 1111 1111" size=25 name=o4 required=true><br> <br>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type=integer placeholder="CVC" size=5 name=o5 required=true> <br><br>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type=submit value=Purchase>
+</form> 
+
+<?php
+// remove all session variables
+session_unset(); 
+
+// destroy the session 
+session_destroy(); 
+?>
+
+</div><br><br><br><br>
+</body>
+</html>
